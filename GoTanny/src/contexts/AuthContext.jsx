@@ -9,6 +9,7 @@ import {
 } from 'firebase/auth'
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { auth, googleProvider, db } from '../config/firebase'
+import { API_ENDPOINTS } from '../config/api_config'
 
 const AuthContext = createContext()
 
@@ -128,7 +129,7 @@ export const AuthProvider = ({ children }) => {
   // Forgot Password
   const forgotPassword = async (email) => {
     try {
-      const response = await fetch('http://localhost:7000/api/auth/forgot-password', {
+      const response = await fetch(`${API_ENDPOINTS.AUTH}/forgot-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -149,7 +150,7 @@ export const AuthProvider = ({ children }) => {
   // Reset Password
   const resetPassword = async (token, newPassword) => {
     try {
-      const response = await fetch('http://localhost:7000/api/auth/reset-password', {
+      const response = await fetch(`${API_ENDPOINTS.AUTH}/reset-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -7,6 +7,7 @@ import Header from '../components/Header/Header'
 import { useAuth } from '../contexts/AuthContext'
 import { uploadScanImage, saveScanResult } from '../services/firebaseService'
 import { diseaseData } from '../data/diseaseData'
+import { API_ENDPOINTS } from '../config/api_config'
 import styles from './ScanTanaman.module.css'
 
 const ScanTanaman = () => {
@@ -97,7 +98,7 @@ const ScanTanaman = () => {
           }
       }
 
-      const response = await fetch('http://localhost:8000/analyze', {
+      const response = await fetch(API_ENDPOINTS.ANALYZE, {
         method: 'POST',
         body: formData,
         headers: token ? {
