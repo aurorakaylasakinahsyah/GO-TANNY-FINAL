@@ -1,0 +1,105 @@
+.filtersSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.filterBox {
+  background: var(--background-card);
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-normal);
+}
+
+.filterBox:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.filterBox:focus-within {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-green-light);
+}
+
+.filterLabel {
+  font-size: 0.75rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterLabel i {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.searchWrapper,
+.selectWrapper {
+  position: relative;
+}
+
+.searchWrapper i,
+.selectWrapper i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.searchInput,
+.filterSelect {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.75rem;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--background-light);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  transition: var(--transition-normal);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.searchInput:focus,
+.filterSelect:focus {
+  background: var(--background-card);
+  border-color: var(--primary-green-light);
+  box-shadow: 0 0 0 4px rgba(93, 122, 61, 0.1);
+}
+
+.searchInput:focus + i,
+.filterSelect:focus + i {
+  color: var(--primary-green-light);
+}
+
+.filterSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235d7a3d' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+@media (max-width: 1024px) {
+  .filtersSection {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
