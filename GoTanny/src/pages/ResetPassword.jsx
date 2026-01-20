@@ -5,6 +5,7 @@ import { FiLock, FiEye, FiEyeOff, FiKey } from 'react-icons/fi'
 import toast from 'react-hot-toast'
 import { useAuth } from '../contexts/AuthContext'
 import styles from './Login.module.css' // Reusing Login styles
+import logo from '../assets/LOGO.png'
 
 const ResetPassword = () => {
   const [token, setToken] = useState('')
@@ -69,7 +70,7 @@ const ResetPassword = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
-          <img src="/gambar/LOGO.png" alt="GO TANY Logo" className={styles.logoImage} />
+          <img src={logo} alt="GO TANY Logo" className={styles.logoImage} />
         </motion.div>
         <span className={styles.companyName}>Organic Solutions</span>
       </motion.div>

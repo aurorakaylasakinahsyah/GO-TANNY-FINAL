@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiMessageSquare, FiCamera, FiSearch, FiCheck } from 'react-icons/fi'
 import styles from './HalamanUtama.module.css'
+import logo from '../assets/LOGO.png'
 
 const HalamanUtama = () => {
   const features = [
@@ -56,7 +57,7 @@ const HalamanUtama = () => {
       <header className={styles.header}>
         <div className={styles.navContainer}>
           <Link to="/" className={styles.logo}>
-            <img src="/gambar/LOGO.png" alt="GO TANY Logo" className={styles.logoImg} />
+            <img src={logo} alt="GO TANY Logo" className={styles.logoImg} />
             <span>GO TANY</span>
           </Link>
           
@@ -251,7 +252,7 @@ const HalamanUtama = () => {
           <div className={styles.footerMain}>
             <div className={styles.footerBrand}>
               <div className={styles.footerLogo}>
-                <img src="/gambar/LOGO.png" alt="GO TANY Logo" />
+                <img src={logo} alt="GO TANY Logo" />
               </div>
               <p className={styles.footerDesc}>
                 Platform digital untuk identifikasi dan perawatan kesehatan tanaman. 

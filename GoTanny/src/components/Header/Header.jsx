@@ -4,6 +4,7 @@ import { FiCamera, FiMenu, FiX, FiUser, FiLogOut, FiChevronDown } from 'react-ic
 import { useAuth } from '../../contexts/AuthContext'
 import toast from 'react-hot-toast'
 import styles from './Header.module.css'
+import logo from '../../assets/LOGO.png'
 
 function Header() {
   const navigate = useNavigate()
@@ -41,7 +42,7 @@ function Header() {
       <div className={styles.headerContainer}>
         <Link to={currentUser ? "/beranda" : "/"} className={styles.logo}>
           <div className={styles.logoIcon}>
-            <img src="/gambar/LOGO.png" alt="GO TANY Logo" />
+            <img src={logo} alt="GO TANY Logo" />
           </div>
           <div className={styles.logoText}>
             <span className={styles.brandName}>GO TANY</span>

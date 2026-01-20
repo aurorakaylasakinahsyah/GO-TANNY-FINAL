@@ -16,7 +16,9 @@ app.use(cors({
     'http://localhost:7000', 'http://127.0.0.1:9000', 
     'http://localhost:3000', 'http://127.0.0.1:3000',
     'http://localhost:3001', 'http://127.0.0.1:3001',
-    'http://localhost:5173', 'http://127.0.0.1:5173' // Common Vite ports
+    'http://localhost:5173', 'http://127.0.0.1:5173', // Common Vite ports
+    'https://go-tanny-final.vercel.app', // Production Frontend
+    'https://go-tanny-final.vercel.app/'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

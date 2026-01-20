@@ -6,6 +6,7 @@ import { FcGoogle } from 'react-icons/fc'
 import toast from 'react-hot-toast'
 import { useAuth } from '../contexts/AuthContext'
 import styles from './Login.module.css'
+import logo from '../assets/LOGO.png'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -75,7 +76,7 @@ const Login = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
-          <img src="/gambar/LOGO.png" alt="GO TANY Logo" className={styles.logoImage} />
+          <img src={logo} alt="GO TANY Logo" className={styles.logoImage} />
         </motion.div>
         <span className={styles.companyName}>Organic Solutions</span>
       </motion.div>

@@ -5,6 +5,7 @@ import { FiUser, FiMail, FiPhone, FiLock, FiEye, FiEyeOff, FiAtSign } from 'reac
 import toast from 'react-hot-toast'
 import { useAuth } from '../contexts/AuthContext'
 import styles from './Register.module.css'
+import logo from '../assets/LOGO.png'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -134,7 +135,7 @@ const Register = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
-          <img src="/gambar/LOGO.png" alt="GO TANY Logo" className={styles.logoImage} />
+          <img src={logo} alt="GO TANY Logo" className={styles.logoImage} />
         </motion.div>
         <span className={styles.companyName}>Organic Solutions</span>
       </motion.div>
